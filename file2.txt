@@ -1,0 +1,17 @@
+---
+apiVesrion: V1
+kind: Pod
+metadata:
+   name: nginx-pod
+   labels:
+   type: webserver
+   author: raja
+spec:
+ replicas: 2
+ containers:
+  - name: nginx-container
+    image: nginx
+    ports:
+     - conatinerPort: 80
+       hostPort:8080
+...
